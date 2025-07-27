@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             const apiUrl = 'https://api.dify.ai/v1/workflows/run';
-            const apiKey = 'app-2niCQ7DuwSYMa3yXpjlrQ2rW';
 
             const requests = drugList.map(drug => {
                 const requestBody = {
