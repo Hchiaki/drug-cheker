@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手術前 内服薬中止チェッカー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>手術前 内服薬中止チェッカー</h1>
+        <p>服用中のお薬と手術予定日を入力してください。<br>お薬が複数ある場合は、1行に1つずつ入力してください。</p>
+
+        <form id="drug-form">
+            <div class="form-group">
+                <label for="drug-list">お薬の名前:</label>
+                <textarea id="drug-list" rows="5" placeholder="例:
+アスピリン
+ワーファリン
+メトホルミン"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="surgery-date">手術予定日:</label>
+                <input type="date" id="surgery-date">
+            </div>
+            <button type="submit">確認する</button>
+        </form>
+
+        <div id="loading" class="hidden">
+            <p>Difyに問い合わせ中...</p>
+        </div>
+
+        <div id="results-container">
+            <h2>結果</h2>
+            <ul id="results-list">
+                <!-- 結果はここに表示されます -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
